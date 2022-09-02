@@ -1,3 +1,5 @@
+import CartWidget from './CartWidget';
+
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
@@ -20,26 +22,27 @@ function NavBar() {
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
-                Inicio
+                INICIO
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Robots
+                ROBOTS
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Piezas
+                PIEZAS
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Contacto
+                CONTACTO
               </a>
             </li>
           </ul>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );

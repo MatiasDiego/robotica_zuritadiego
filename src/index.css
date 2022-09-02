@@ -23,3 +23,7 @@ code {
 .navbar-brand:hover {
   color: blue;
 }
+
+.bi-cart {
+  color: #fff;
+}

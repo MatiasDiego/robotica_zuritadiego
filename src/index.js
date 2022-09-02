@@ -1,12 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import './components/NavBar';
-import NavBar from './components/NavBar';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./components/NavBar";
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <div>
     <NavBar />
-  </React.StrictMode>
+    <ItemListContainer greeting="FUTURO ECOMMERCE DE PRODUCTOS DE ROBOTICA" />
+  </div>
 );
