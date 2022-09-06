@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({ stock, inicial, onAdd}) => {
+const ItemCount = ({ stock, inicial, onAdd }) => {
   const [count, setCount] = useState(inicial);
 
   const handleClickPlus = () => {
@@ -18,11 +18,22 @@ const ItemCount = ({ stock, inicial, onAdd}) => {
   };
 
   return (
-    <div className="bntContainer ms-5">
-      <button className="btn btn-primary" onClick={handleClickMinus}>-</button>
-      <p>{count}</p>
-      <button className="btn btn-primary" onClick={handleClickPlus}>+</button>
-      <button className="btn btn-success" onClick={onAdd}>Agregar</button>
+    <div className="bntContainer ms-5 mt-5">
+      <button className="btn btn-primary" onClick={handleClickMinus}>
+        -
+      </button>
+      <div className="itemCount">
+        <p>{count}</p>
+      </div>
+      <button className="btn btn-primary" onClick={handleClickPlus}>
+        +
+      </button>
+      <button
+        className="btn btn-success btnAgregar"
+        onClick={() => onAdd(count)}
+      >
+        Agregar
+      </button>
     </div>
   );
 };

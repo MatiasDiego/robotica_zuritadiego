@@ -8,7 +8,7 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-            <p>{greeting}</p>
+            <p className="greeting mt-5 ms-3">{greeting}</p>
             <ItemCount stock={5} inicial={1} onAdd={onAdd} />
         </>
     );

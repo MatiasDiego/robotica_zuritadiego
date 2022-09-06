@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+p {
+  margin: 0!important;
+}
+
 .nav-link{
   color: #fff!important;
 }
@@ -27,3 +31,23 @@ code {
 .bi-cart {
   color: #fff;
 }
+
+.bntContainer.ms-5 {
+  display: flex;
+}
+
+.itemCount {
+  width: 2em;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnAgregar {
+  margin-left: 1em;
+}
+
+/* .btn.btn-primary {
+  margin-right: 1em;
+} */
