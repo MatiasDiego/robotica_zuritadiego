@@ -34,6 +34,8 @@ p {
 
 .bntContainer.ms-5 {
   display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
 }
 
 .itemCount {
@@ -48,6 +50,24 @@ p {
   margin-left: 1em;
 }
 
-/* .btn.btn-primary {
-  margin-right: 1em;
-} */
+.productosContainer {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#btn-details {
+  padding: .3em;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+#imgProducts {
+  width: 250px;
+}
+
+.card-body {
+  text-align: center;
+}
