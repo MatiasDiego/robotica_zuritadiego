@@ -25,7 +25,7 @@ p {
 }
 
 .navbar-brand:hover {
-  color: blue;
+  color: #ffff00;
 }
 
 .bi-cart {
@@ -70,4 +70,30 @@ p {
 
 .card-body {
   text-align: center;
+}
+
+.col_itemdetail {
+  display: flex;
+  align-items: center;
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 1em;
+}
+
+.price_itemdetail {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+.text-muted {
+  font-size: 0.75em!important;
+  color: #ffff00!important;
+}
+
+.description_itemdetail {
+  text-align: justify;
+}
+
+.itemdetail_container {
+  margin: 4em;
 }
