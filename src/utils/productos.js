@@ -1,6 +1,7 @@
 const productos = [
   {
     id: 1,
+    idCategory: "2",
     title: 'Brazo Mecánico Robot',
     price: '100',
     picture:
@@ -11,6 +12,7 @@ const productos = [
   },
   {
     id: 2,
+    idCategory: "1",
     title: 'Robot 2',
     price: '200',
     picture:
@@ -20,6 +22,7 @@ const productos = [
   },
   {
     id: 3,
+    idCategory: "2",
     title: 'Robot 3',
     price: '300',
     picture:
