@@ -1,6 +1,3 @@
-import ItemCount from "./ItemCount";
-import ItemListContainer from "./ItemListContainer";
-
 const ItemDetail = ({ picture, title, description, price, stock }) => {
 
   return (

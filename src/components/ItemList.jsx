@@ -1,27 +1,16 @@
-import { useState, useEffect } from "react";
-import customFetch from '../utils/customFetch';
 import Item from "./Item";
-import productos from '../utils/productos';
 
-
-const ItemList = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    customFetch(2000, productos)
-      .then((productos) => setData(productos))
-      .catch((err) => console.log("Hubo un error"));
-  }, []);
+const ItemList = ({items}) => {
 
   return (
     <div className="productosContainer">
-      {data.length ? (
-        data.map((producto) => (
+      {items.length ? (
+        items.map((item) => (
           <Item
-            key={producto.id}
-            picture={producto.picture}
-            title={producto.title}
-            price={producto.price}
+            key={item.id}
+            picture={item.picture}
+            title={item.title}
+            price={item.price}
           />
         ))
       ) : (
