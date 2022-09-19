@@ -1,13 +1,15 @@
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
+import logo  from '../img/robot_logo.png';
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container-fluid">
-        <Link to="/">
-          ROBOTICA
+        <Link to="/" className="logoRoboticaContainer">
+          <img className="logoRobotica" src={logo} alt="Logo Robotica" />
         </Link>
+        <span className="marcaRobotica">ROBOT.ICA</span>
         <button
           className="navbar-toggler"
           type="button"

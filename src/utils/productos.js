@@ -50,6 +50,16 @@ const productos = [
     stock: '15',
     description: 'Chasis Robot Oruga Autónomo, incluye 2 motores, ideal proyectos OpenSource. Para armar. No incluye electrónica de control. Medidas 21 x 16.5. Color a elección según stock: ROJO - NEGRO - BLANCO - AZUL - GRIS - VERDE',
   },
+  {
+    id: 6,
+    idCategory: "2",
+    title: 'Kit 840 Transistores Npn',
+    price: '6330',
+    picture:
+      'https://http2.mlstatic.com/D_NQ_NP_2X_709901-MLA46618859833_072021-F.webp',
+    stock: '15',
+    description: 'Producto: Kit 840 Transistores TO-92 con Caja Plastica. Excelente Kit para todo aquel que necesita tener Transistores de las medidas y colores standard siempre al alcance de la mano.',
+  },
 ];
 
 export default productos;

@@ -20,24 +20,24 @@ const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
 
   return (
     <div className="bntContainer ms-5">
-      <button className="btn btn-primary" onClick={handleClickMinus}>
+      <button className="btn btn-counter" onClick={handleClickMinus}>
         -
       </button>
       <div className="itemCount">
         <p>{count}</p>
       </div>
-      <button className="btn btn-primary" onClick={handleClickPlus}>
+      <button className="btn btn-counter" onClick={handleClickPlus}>
         +
       </button>
       {stock && count ? (
         <button
-          className="btn btn-success btnAgregar"
+          className="btn btn-counterAdd btnAgregar"
           onClick={() => onAdd(count)}
         >
           Agregar
         </button>
       ) : (
-        <button className="btn btn-succes btnAgregar" disabled>
+        <button className="btn btn-counterAdd btnAgregar" disabled>
           Agregar
         </button>
       )}

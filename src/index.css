@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Arco';
+  src: local('Arco'), url('./fonts/ARCO.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: local('Poppins-Regular'), url('./fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: local('Poppins-Bold'), url('./fonts/Poppins-Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,29 +22,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #03C4A1;
 }
 
 p {
   margin: 0!important;
 }
 
-.nav-link{
-  color: #fff!important;
+.navbar {
+  height: 80px;
 }
 
-.navbar-brand {
-  color:#fff;
+.nav-item {
+  margin-right: 2em;
+  font-family: 'Arco';
+  font-size: 1.3em;
 }
 
-.navbar-brand:hover {
-  color: #ffff00;
+.nav-item:hover {
+  color: #9BAEC2;
+}
+
+.logoRoboticaContainer {
+  width: 80px;
+  height: 70px;
+}
+
+.logoRobotica {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.marcaRobotica {
+  color: #fff;
+  font-family: 'Arco';
+  font-size: 2em;
 }
 
 .bi-cart {
   color: #fff;
+  font-size: 22px;
+  margin-right: 1em;
 }
 
 .bntContainer.ms-5 {
@@ -46,24 +86,51 @@ p {
 }
 
 .btnAgregar {
-  margin-left: 1em;
+  
 }
 
 .productosContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  height: 100vh;
-  padding: 3em;
+  grid-auto-columns: max-content;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 60px auto;
+  max-width: 60em;
 }
 
-#btn-details {
-  padding: .3em;
-  font-size: .8em;
+.btn-details {
+  padding: 0.3em;
+  font-size: .9em;
   text-transform: uppercase;
-  margin-top: 2em;
+  margin-top: 1.5em;
+  background-color: #03C4A1;
+  border-color: #03C4A1;
+  color: #fff;
+  font-family: 'Poppins-Bold';
+}
+
+.btn-details:hover {
+  color: #03C4A1;
+}
+
+.btn-counter {
+  background-color: #150485;
+  color: #fff;
+  font-weight: 900;
+}
+
+.btn-counterAdd {
+  background-color: #03C4A1;
+  border-radius: #03c4a1;
+  color: #fff;
+  font-family: 'Poppins-Bold';
+  margin-left: 1em;
+}
+
+.btn-counterAdd:hover {
+  color: #03C4A1;
 }
 
 #imgProducts {
