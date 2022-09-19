@@ -35,7 +35,6 @@ p {
 .bntContainer.ms-5 {
   display: flex;
   justify-content: flex-end;
-  margin-right: 2em;
 }
 
 .itemCount {
@@ -51,10 +50,13 @@ p {
 }
 
 .productosContainer {
-  display: flex;
-  height: 70vh;
-  align-items: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  height: 100vh;
+  padding: 3em;
 }
 
 #btn-details {
@@ -66,6 +68,10 @@ p {
 
 #imgProducts {
   width: 250px;
+}
+
+.card {
+  align-items: center;
 }
 
 .card-body {
@@ -96,4 +102,20 @@ p {
 
 .itemdetail_container {
   margin: 4em;
+}
+
+.itemCountContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 3em;
+}
+
+.imgUnderContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.imgUnderConstruction {
+  width: 100%;
+  height: auto;
 }

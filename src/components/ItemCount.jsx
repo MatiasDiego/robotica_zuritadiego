@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
-const ItemCount = ({ stock, inicial, onAdd }) => {
-  const [count, setCount] = useState(inicial);
+const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
+  const [count, setCount] = useState(0);
 
   const handleClickPlus = () => {
     setCount(count + 1);
@@ -18,7 +19,7 @@ const ItemCount = ({ stock, inicial, onAdd }) => {
   };
 
   return (
-    <div className="bntContainer ms-5 mt-5">
+    <div className="bntContainer ms-5">
       <button className="btn btn-primary" onClick={handleClickMinus}>
         -
       </button>
@@ -28,12 +29,18 @@ const ItemCount = ({ stock, inicial, onAdd }) => {
       <button className="btn btn-primary" onClick={handleClickPlus}>
         +
       </button>
-      <button
-        className="btn btn-success btnAgregar"
-        onClick={() => onAdd(count)}
-      >
-        Agregar
-      </button>
+      {stock && count ? (
+        <button
+          className="btn btn-success btnAgregar"
+          onClick={() => onAdd(count)}
+        >
+          Agregar
+        </button>
+      ) : (
+        <button className="btn btn-succes btnAgregar" disabled>
+          Agregar
+        </button>
+      )}
     </div>
   );
 };
