@@ -6,14 +6,14 @@ const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
 
   const handleClickPlus = () => {
     setCount(count + 1);
-    if (count === stock) {
+    if (count == stock) {
       setCount(count);
     }
   };
 
   const handleClickMinus = () => {
     setCount(count - 1);
-    if (count === inicial) {
+    if (count == inicial) {
       setCount(count);
     }
   };

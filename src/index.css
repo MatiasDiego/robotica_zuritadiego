@@ -187,6 +187,15 @@ p {
   height: auto;
 }
 
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+
 /* SPINNER */
 
 .cssload-loader{
