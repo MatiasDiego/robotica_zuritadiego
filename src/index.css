@@ -85,9 +85,9 @@ p {
   align-items: center;
 }
 
-.btnAgregar {
+/* .btnAgregar {
   
-}
+} */
 
 .productosContainer {
   display: grid;
@@ -187,14 +187,13 @@ p {
   height: auto;
 }
 
-#red {
-  background-color: red;
+.imgProductTable {
+  width: 150px;
 }
 
-#green {
-  background-color: green;
+#flex {
+  display: flex;
 }
-
 
 /* SPINNER */
 

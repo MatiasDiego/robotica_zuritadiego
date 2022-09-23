@@ -16,6 +16,7 @@ const CartContextProvider = ({ children }) => {
                     idItem: item.id,
                     imgItem: item.picture,
                     nameItem: item.title,
+                    descItem: item.description,
                     costItem: item.price,
                     cantItem: cantidad
                 }
@@ -26,25 +27,24 @@ const CartContextProvider = ({ children }) => {
         }
     }
 
+    const clear = () => {
+        setCartList([]);
+    }
+
     const removeItem = (id) => {
         let foundItem = cartList.filter(item => item.idItem != id);
         setCartList(foundItem);
     }
 
-    const clear = () => {
-        setCartList([]);
-    }
-
     const totalPorItem = (idItem) => {
         let indice = cartList.map(item => item.idItem).indexOf(idItem);
-        
-        return cartList[indice].costItem*cartList[indice].cantItem;
+        return cartList[indice].costItem * cartList[indice].cantItem;
     }
 
     const subTotal = () => {
-        let totalPorItem = cartList.map(item => totalPorItem(item.idItem));
+        let totalXItem = cartList.map(item => totalPorItem(item.idItem));
 
-        return totalPorItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+        return totalXItem.reduce((previousValue, currentValue) => previousValue + currentValue);
     }
 
     const total = () => {
