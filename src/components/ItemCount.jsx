@@ -4,6 +4,10 @@ import { useState } from "react";
 const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    setCount(inicial);
+  },[]);
+
   const handleClickPlus = () => {
     setCount(count + 1);
     if (count == stock) {

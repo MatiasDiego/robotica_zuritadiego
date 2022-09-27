@@ -1,10 +1,9 @@
 import Item from "./Item";
 
-const ItemList = ({items}) => {
-
+const ItemList = ({ items }) => {
   return (
     <div className="productosContainer">
-      {items.length ? (
+      {items.length > 0 ? (
         items.map((item) => (
           <Item
             key={item.id}
@@ -15,10 +14,10 @@ const ItemList = ({items}) => {
           />
         ))
       ) : (
-        <div className='cssload-loader'>
-          <div className='cssload-inner cssload-one'></div>
-          <div className='cssload-inner cssload-two'></div>
-          <div className='cssload-inner cssload-three'></div>
+        <div className="cssload-loader">
+          <div className="cssload-inner cssload-one"></div>
+          <div className="cssload-inner cssload-two"></div>
+          <div className="cssload-inner cssload-three"></div>
         </div>
       )}
     </div>

@@ -24,6 +24,12 @@ const ItemListContainer = () => {
     }
   }, [idCategory]);
 
+  useEffect(() => {
+    return () => {
+      setData([]);
+    };
+  }, []);
+
   return (
     <>
       <ItemList items={data} />

@@ -7,7 +7,7 @@ const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
 
     const addItem = (item, cantidad) => {
-        let search = cartList.find(producto => producto.idItem == item.id);
+        let search = cartList.find(producto => parseInt(producto.idItem) === item.id);
 
         if(search === undefined) {
             setCartList([
@@ -18,7 +18,7 @@ const CartContextProvider = ({ children }) => {
                     nameItem: item.title,
                     descItem: item.description,
                     costItem: item.price,
-                    cantItem: cantidad
+                    cantItem: cantidad,
                 }
             ]);
         } else {

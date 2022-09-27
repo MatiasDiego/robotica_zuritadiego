@@ -1,3 +1,4 @@
+/************* FONTS *************/
 @font-face {
   font-family: 'Arco';
   src: local('Arco'), url('./fonts/ARCO.ttf') format('truetype');
@@ -13,6 +14,7 @@
   src: local('Poppins-Bold'), url('./fonts/Poppins-Bold.ttf') format('truetype');
 }
 
+/************* COMMON STYLES *************/
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -35,6 +37,19 @@ p {
   margin: 0!important;
 }
 
+.card {
+  align-items: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+}
+
+/************* NAVBAR STYLES *************/
 .navbar {
   height: 80px;
 }
@@ -49,6 +64,7 @@ p {
   color: #9BAEC2;
 }
 
+/************* LOGO STYLES *************/
 .logoRoboticaContainer {
   width: 80px;
   height: 70px;
@@ -66,12 +82,22 @@ p {
   font-size: 2em;
 }
 
-.bi-cart {
-  color: #fff;
-  font-size: 22px;
-  margin-right: 1em;
+/************* CARTWIDGET STYLES *************/
+.rounded-circle {
+  background-color: #03C4A1;
 }
 
+.btn-cart {
+  background-color: #150485;
+  color: #fff;
+  font-weight: 900;
+}
+
+.btn-cart:hover {
+  color: #fff;
+}
+
+/************* ITEM COUNT STYLES *************/
 .bntContainer.ms-5 {
   display: flex;
   justify-content: flex-end;
@@ -83,36 +109,6 @@ p {
   align-content: center;
   justify-content: center;
   align-items: center;
-}
-
-/* .btnAgregar {
-  
-} */
-
-.productosContainer {
-  display: grid;
-  grid-auto-columns: max-content;
-  grid-auto-flow: dense;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 60px auto;
-  max-width: 60em;
-}
-
-.btn-details {
-  padding: 0.3em;
-  font-size: .9em;
-  text-transform: uppercase;
-  margin-top: 1.5em;
-  background-color: #03C4A1;
-  border-color: #03C4A1;
-  color: #fff;
-  font-family: 'Poppins-Bold';
-}
-
-.btn-details:hover {
-  color: #03C4A1;
 }
 
 .btn-counter {
@@ -133,18 +129,39 @@ p {
   color: #03C4A1;
 }
 
+/************* ITEM LIST STYLES *************/
+.productosContainer {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 60px auto;
+  max-width: 60em;
+}
+
+/************* ITEM STYLES *************/
+.btn-details {
+  padding: 0.3em;
+  font-size: .9em;
+  text-transform: uppercase;
+  margin-top: 1.5em;
+  background-color: #03C4A1;
+  border-color: #03C4A1;
+  color: #fff;
+  font-family: 'Poppins-Bold';
+}
+
+.btn-details:hover {
+  color: #03C4A1;
+}
+
 #imgProducts {
   width: 250px;
 }
 
-.card {
-  align-items: center;
-}
-
-.card-body {
-  text-align: center;
-}
-
+/************* ITEM DETAIL STYLES *************/
 .col_itemdetail {
   display: flex;
   align-items: center;
@@ -177,16 +194,7 @@ p {
   padding: 3em;
 }
 
-.imgUnderContainer {
-  width: 100%;
-  height: 100%;
-}
-
-.imgUnderConstruction {
-  width: 100%;
-  height: auto;
-}
-
+/************* CART STYLES *************/
 .imgProductTable {
   width: 150px;
 }
@@ -195,8 +203,16 @@ p {
   display: flex;
 }
 
-/* SPINNER */
+.cartEmptyImg {
+  width: 100%;
+}
 
+.cardCartEmpty {
+  margin-top: 8%;
+  width: 100%;
+}
+
+/************* SPINNER STYLES *************/
 .cssload-loader{
   position: relative;
   width: 150px;
