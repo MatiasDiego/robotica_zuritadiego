@@ -1,3 +1,7 @@
+/* 
+  PRIMERA PANTALLA QUE CARGA NUESTRO ECOMMERCE 
+  DONDE SE MUESTRA LA GRILLA DE PRODUCTOS
+*/
 import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
 import customFetch from "../utils/customFetch";
@@ -9,7 +13,6 @@ const ItemListContainer = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    console.log(idCategory);
     if (idCategory) {
       customFetch(
         500,

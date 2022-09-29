@@ -1,3 +1,7 @@
+/*
+  GRILLA DE PRODUCTOS QUE SE PINTA EN LA PRIMERA PÁGINA
+*/
+
 import Item from "./Item";
 
 const ItemList = ({ items }) => {
@@ -14,6 +18,7 @@ const ItemList = ({ items }) => {
           />
         ))
       ) : (
+        //SPINNER
         <div className="cssload-loader">
           <div className="cssload-inner cssload-one"></div>
           <div className="cssload-inner cssload-two"></div>
