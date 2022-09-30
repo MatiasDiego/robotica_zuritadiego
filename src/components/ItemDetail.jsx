@@ -7,6 +7,10 @@ const ItemDetail = ({ item }) => {
   const [itemCount, setItemCount] = useState(0);
   const context = useContext(CartContext);
 
+  console.log(item);
+  console.log(`El id es: ${item.id}`);
+  console.log(`El title es: ${item.title}`);
+
   const onAdd = (cantidad) => {
     alert("Has seleccionado " + cantidad + " items");
     setItemCount(cantidad);
@@ -22,7 +26,7 @@ const ItemDetail = ({ item }) => {
             <img
               src={item.picture}
               className="img-fluid rounded-start"
-              alt="Robot 1"
+              alt="Robot"
             />
           </div>
           {/* COLUMNA DETALLES DE PRODUCTO */}

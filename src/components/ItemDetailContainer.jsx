@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../utils/firebaseConfig";
+import { firestoreFetchOne } from "../utils/firestoreFetchOne";
 import ItemDetail from "./ItemDetail";
+
 
 const ItemDetailContainer = () => {
   const [ data, setData ] = useState({});
@@ -10,22 +10,10 @@ const ItemDetailContainer = () => {
   const { idItem } = useParams();
 
   useEffect(() => {
-    (async function() {
-      const docRef = doc(db, "products", idItem);
-      const docSnap = await getDoc(docRef);
-      
-      if(docSnap.exists()) {
-        return {
-          id: idItem,
-          ...docSnap.data()
-        }
-      } else {
-        console.log("No such document!")
-      }
-      //setData(docSnap);
-    })()
-  }, [idItem]);
-
+    firestoreFetchOne(idItem)
+        .then(result => setData(result))
+        .catch(err => console.log(err))
+  }, []);
 
   return (
     <>
