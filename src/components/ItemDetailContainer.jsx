@@ -23,12 +23,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-/*
-import customFetch from "../utils/customFetch";
-import productos from "../utils/productos";
-
-customFetch(500, productos.find(item => item.id == idItem))
-  .then((productos) => setData(productos))
-  .catch((err) => console.log(err))
-*/
