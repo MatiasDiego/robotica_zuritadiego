@@ -1,4 +1,5 @@
 import { query, where, collection, getDocs } from '@firebase/firestore';
+import { doc, setDoc } from "firebase/firestore";
 import { db } from "./firebaseConfig";
 
 export const firestoreFetch = async (idCategory) => {
@@ -14,4 +15,13 @@ export const firestoreFetch = async (idCategory) => {
         ...document.data()
     }));
     return dataFromFirestore;
+}
+
+export const createOrderInFirestore = async (order) => {
+    // Add a new document with a generated id
+    const newOrderRef = doc(collection(db, "orders"));
+
+    // later...
+    await setDoc(newOrderRef, order);
+    return newOrderRef;
 }

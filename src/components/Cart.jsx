@@ -1,10 +1,35 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
+import {serverTimestamp} from 'firebase/firestore'
 import emptyCartImg from "../img/empty_cart.png";
+import { createOrderInFirestore } from '../utils/firestoreFetch';
 
 const Cart = () => {
   const contexto = useContext(CartContext);
+
+  const createOrder = () => {
+    let order = {
+      buyer: {
+        name: 'Maria Sanchez',
+        phone: '456123789',
+        email: 'marsanchez@gmail.com'
+      },
+      items: contexto.cartList.map(item => ({
+        id: item.idItem,
+        costItem: item.costItem,
+        nameItem: item.nameItem,
+        cantidad: item.cantItem
+      })),
+      date: serverTimestamp(),
+      total: contexto.total()
+    }
+    createOrderInFirestore(order)
+      .then(result => alert('Tu orden ha sido creada con éxito. '))
+      .catch(error => console.log(error))
+    contexto.clear();
+  }
+
 
   return (
     <div className="container-fluid row">
@@ -41,6 +66,15 @@ const Cart = () => {
                     >
                       BORRAR
                     </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <button className="btn btn-details" onClick={createOrder}>TERMINAR COMPRA</button>
                   </td>
                 </tr>
               </tbody>
