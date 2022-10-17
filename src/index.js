@@ -8,18 +8,24 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./components/CartContext";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <CartContextProvider>
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:idCategory" element={<ItemListContainer />} />
-        <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-        <Route path="/carrito" element={<Cart />} />
-      </Routes>
-    </BrowserRouter>
-  </CartContextProvider>
+  <>
+    <CartContextProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:idCategory" element={<ItemListContainer />} />
+          <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<Cart />} />
+          <Route path="/contacto" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CartContextProvider>
+  </>
 );

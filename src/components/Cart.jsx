@@ -32,7 +32,7 @@ const Cart = () => {
 
 
   return (
-    <div className="container-fluid row">
+    <div className="container-fluid row cart-container">
       {contexto.cartList.length > 0 &&
         contexto.cartList.map((item) => (
           <div className="" key={item.idItem}>

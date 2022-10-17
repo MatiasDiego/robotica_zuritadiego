@@ -195,6 +195,10 @@ p {
 }
 
 /************* CART STYLES *************/
+.cart-container {
+  height: 100vh;
+}
+
 .imgProductTable {
   width: 150px;
 }
@@ -210,6 +214,37 @@ p {
 .cardCartEmpty {
   margin-top: 8%;
   width: 100%;
+}
+
+/************* FOOTER STYLES *************/
+.footer {
+  background-color: #0a0a0a;
+}
+.text-muted {
+  color: #6c757d!important;
+}
+
+.footer_item {
+  margin-left: 1em;
+}
+
+.footer-link{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+/************* CONTACT FORM STYLES *************/
+.grid-column-form {
+  margin-left: 6em;
+}
+
+.img-contact {
+  width: 150px;
+  height: auto;
+}
+
+.contact-section {
+  margin-bottom: 4em;
 }
 
 /************* SPINNER STYLES *************/
