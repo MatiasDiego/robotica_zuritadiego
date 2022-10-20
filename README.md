@@ -1,1 +1,1 @@
-Primera entrega para el desafío perteneciente al curso de ReactJS para CoderHouse
+Ecommerce con React JS para el curso realizado en CoderHouse
